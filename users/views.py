@@ -30,3 +30,15 @@ def register(request):
 
     context = {'form':form}
     return render(request,'users/register.html',context)
+
+
+def counter(request):
+    """解方程"""
+    if request.method != 'POST':
+        #显示空的注册表单
+        form = UserCreationForm()
+
+
+
+    context = {'form':form}
+    return render(request,'users/counter.html',context)
